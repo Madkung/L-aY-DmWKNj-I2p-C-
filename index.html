@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>HTML Testing Platform</title>
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Mitr:wght@400;700&display=swap" rel="stylesheet">
+<style>
+  body {
+    font-family: 'Mitr', sans-serif;
+    margin: 0;
+    padding: 0;
+  }
+  
+  h1 {
+    text-align: center;
+  }
+  
+  form {
+    margin: 20px auto;
+    width: 80%;
+    max-width: 600px;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+  }
+  
+  label, textarea {
+    display: block;
+    margin-bottom: 10px;
+  }
+  
+  textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    resize: vertical;
+  }
+  
+  input[type="submit"] {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  input[type="submit"]:hover {
+    background-color: #0056b3;
+  }
+  
+  #output {
+    margin: 20px auto;
+    width: 80%;
+    max-width: 600px;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+    white-space: pre-line;
+  }
+
+  footer {
+    text-align: center;
+    margin-top: 20px;
+    padding: 10px 0;
+    background-color: #f2f2f2;
+  }
+</style>
+</head>
+<body>
+
+<h1>HTML Testing Platform</h1>
+
+<form>
+  <label for="input_html">Enter HTML Code:</label><br>
+  <textarea id="input_html" name="input_html" rows="10" cols="50"></textarea><br>
+  <input type="submit" value="Run HTML">
+</form>
+
+<hr>
+
+<div id="output">
+
+</div>
+
+<footer>
+  Made By Madkung
+</footer>
+
+<script>
+document.querySelector('form').addEventListener('submit', function(event) {
+  event.preventDefault();
+  var inputHtml = document.querySelector('#input_html').value;
+  document.querySelector('#output').innerHTML = inputHtml;
+});
+</script>
+
+</body>
+</html>
